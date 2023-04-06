@@ -14,7 +14,7 @@ namespace ExcelAtUni.Data
             {
                 using (var db = new SqlConnection(_dataContext.GetConnection()))
                 {
-                    var students = await db.QueryAsync<User>("eau_Sel_GetAllStudents", commandType: CommandType.StoredProcedure);
+                    var students = await db.QueryAsync<User>("eau_Sel_GetAllStudentDetails", commandType: CommandType.StoredProcedure);
 
                     if (students != null)
                     {
